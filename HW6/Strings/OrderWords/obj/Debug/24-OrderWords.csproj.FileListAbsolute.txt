@@ -1,0 +1,1 @@
+D:\telerik\CSharp 2\Homework\HW6\Strings\OrderWords\bin\Debug\OrderWords.exe.config

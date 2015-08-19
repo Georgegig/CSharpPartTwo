@@ -1,0 +1,1 @@
+D:\telerik\CSharp 2\Homework\HW5\ClassesAndObjects\WorkDays\bin\Debug\WorkDays.exe.config

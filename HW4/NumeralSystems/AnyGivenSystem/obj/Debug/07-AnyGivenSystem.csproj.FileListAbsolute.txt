@@ -1,0 +1,1 @@
+D:\telerik\CSharp 2\Homework\HW4\NumeralSystems\AnyGivenSystem\bin\Debug\AnyGivenSystem.exe.config

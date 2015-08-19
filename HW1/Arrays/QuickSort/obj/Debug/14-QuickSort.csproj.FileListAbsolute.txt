@@ -1,0 +1,1 @@
+D:\telerik\CSharp 2\Homework\HW1\Arrays\QuickSort\bin\Debug\QuickSort.exe.config

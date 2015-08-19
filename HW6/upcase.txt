@@ -1,0 +1,134 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ParseTags
+{
+    class ParseTags
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please input a text. If you want any part of the text to be highlighted put it between <upcase> </upcase> tags.");
+            string input = Console.ReadLine();
+
+            List<int> resultedIndexesOfOpeningTags =new List<int>();
+            List<int> resultedLastIndexesOfOpeningTags = new List<int>();
+            int indexerOpening = 0;
+
+            List<int> resultedIndexesOfClosingTags = new List<int>();
+            List<int> resultedLastIndexesOfClosingTags = new List<int>();
+            int indexerClosing = 0;
+
+            List<string> resultedQuotesToUpp = new List<string>();
+            StringBuilder result = new StringBuilder();
+            
+            
+
+            while (input.IndexOf("<upcase>",indexerOpening)!=-1)
+            {
+                resultedIndexesOfOpeningTags.Add(input.IndexOf("<upcase>", indexerOpening));
+                resultedLastIndexesOfOpeningTags.Add(input.IndexOf("<upcase>", indexerOpening)+7);                
+                indexerOpening = input.IndexOf("<upcase>", indexerOpening) + 1;
+
+            }
+            while (input.IndexOf("</upcase>", indexerClosing) != -1)
+            {
+                resultedIndexesOfClosingTags.Add(input.IndexOf("</upcase>", indexerClosing));
+                resultedLastIndexesOfClosingTags.Add(input.IndexOf("</upcase>", indexerClosing)+8);
+                indexerClosing = input.IndexOf("</upcase>", indexerClosing) + 1;
+
+            }
+
+            foreach (var item in resultedIndexesOfOpeningTags)
+            {
+                Console.WriteLine(item);
+            }
+            foreach (var item in resultedIndexesOfClosingTags)
+            {
+                Console.WriteLine(item);
+            }
+            foreach (var item in resultedLastIndexesOfOpeningTags)
+            {
+                Console.WriteLine(item);
+            }
+            foreach (var item in resultedLastIndexesOfClosingTags)
+            {
+                Console.WriteLine(item);
+            }
+
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ParseTags
+{
+    class ParseTags
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please input a text. If you want any part of the text to be highlighted put it between <upcase> </upcase> tags.");
+            string input = Console.ReadLine();
+
+            List<int> resultedIndexesOfOpeningTags =new List<int>();
+            List<int> resultedLastIndexesOfOpeningTags = new List<int>();
+            int indexerOpening = 0;
+
+            List<int> resultedIndexesOfClosingTags = new List<int>();
+            List<int> resultedLastIndexesOfClosingTags = new List<int>();
+            int indexerClosing = 0;
+
+            
+            StringBuilder result = new StringBuilder();
+
+            int temp = 0;
+
+            while (input.IndexOf("<upcase>",indexerOpening)!=-1)
+            {
+                resultedIndexesOfOpeningTags.Add(input.IndexOf("<upcase>", indexerOpening));
+                resultedLastIndexesOfOpeningTags.Add(input.IndexOf("<upcase>", indexerOpening)+7);                
+                indexerOpening = input.IndexOf("<upcase>", indexerOpening) + 1;
+
+            }
+            while (input.IndexOf("</upcase>", indexerClosing) != -1)
+            {
+                resultedIndexesOfClosingTags.Add(input.IndexOf("</upcase>", indexerClosing));
+                resultedLastIndexesOfClosingTags.Add(input.IndexOf("</upcase>", indexerClosing)+8);
+                indexerClosing = input.IndexOf("</upcase>", indexerClosing) + 1;
+
+            }
+            List<string> resultedQuotesToUpp = new List<string>;
+            resultedQuotesToUpp.AddRange(Enumerable.Repeat(null, resultedIndexesOfOpeningTags.Count));
+            for (int i = 0; i < resultedIndexesOfOpeningTags.Count; i++)
+            {
+                temp=resultedIndexesOfClosingTags[i] - resultedLastIndexesOfOpeningTags[i] - 1;
+                resultedQuotesToUpp[i] = input.Substring(resultedLastIndexesOfOpeningTags[i] + 1, temp).ToUpper(); 
+            }
+
+            foreach (var item in resultedQuotesToUpp)
+            {
+                Console.WriteLine(item);
+            }
+
+
+
+
+
+
+
+
+
+
+
+            
+        }
+    }
+}

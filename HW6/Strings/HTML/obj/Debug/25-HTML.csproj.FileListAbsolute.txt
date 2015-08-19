@@ -1,0 +1,6 @@
+D:\telerik\CSharp 2\Homework\HW6\Strings\HTML\bin\Debug\HTML.exe.config
+D:\telerik\CSharp 2\Homework\HW6\Strings\HTML\bin\Debug\HTML.exe
+D:\telerik\CSharp 2\Homework\HW6\Strings\HTML\bin\Debug\HTML.pdb
+D:\telerik\CSharp 2\Homework\HW6\Strings\HTML\obj\Debug\25-HTML.csprojResolveAssemblyReference.cache
+D:\telerik\CSharp 2\Homework\HW6\Strings\HTML\obj\Debug\HTML.exe
+D:\telerik\CSharp 2\Homework\HW6\Strings\HTML\obj\Debug\HTML.pdb
